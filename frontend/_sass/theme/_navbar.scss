@@ -1,0 +1,147 @@
+// TODO With the secondary nav inline with the primary, the text collides at a
+// pretty wide breakpoint. We should think about different options for the
+// secondary nav.
+$hide-secondary-nav-breakpoint: 900px;
+
+.usa-navbar {
+  height: auto;
+}
+
+.usa-menu-btn {
+  @extend .usa-button;
+  @extend .usa-button-outline;
+}
+
+.usa-nav-link {
+  font-size: $h5-font-size;
+}
+
+@media screen and (min-width: $nav-width) {
+  .usa-nav-submenu {
+    margin-left: 1.5rem; // to match the padding on the parent element
+    background-color: $color-primary-alt-lightest;
+    a,
+    a:visited {
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: $color-primary-darkest;
+        background-color: $color-primary-alt-light;
+      }
+    }
+  }
+
+  .usa-nav-inner > div {
+    display: flex;
+
+    > div {
+      display: block;
+      position: relative !important;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  // .usa-nav-container {
+  // }
+
+  .usa-nav-primary {
+    flex: 1;
+    order: unset;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+
+    .usa-nav-submenu {
+      margin-left: 0;
+    }
+  }
+
+  .usa-nav-primary button {
+    &[aria-expanded=true] {
+      background-color: $color-white;
+      color: $color-primary-darkest;
+      &:hover {
+        background-color: $color-white;
+      }
+      span {
+        border-bottom-color: $color-primary-alt-light;
+        color: $color-primary-darkest;
+      }
+    }
+  }
+
+  .usa-nav-primary button,
+  .usa-nav-primary .usa-nav-link,
+  .usa-header-extended .usa-nav-link {
+    font-weight: $font-normal;
+    color: $color-primary-darkest;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:hover,
+    &:hover span {
+      border-bottom-color: $color-primary-alt-light;
+    }
+  }
+
+  .usa-nav-primary {
+    button,
+    .usa-nav-link {
+      padding-left: 0;
+      &:focus {
+        span {
+          // match WDS
+          padding-bottom: 0.9rem;
+          border-bottom: 0.7rem solid $color-primary-alt-light;
+        }
+      }
+    }
+    button[aria-expanded=true] {
+      background-color: $color-white;
+      background-image: url('/assets/img/angle-arrow-down-primary.svg');
+      color: $color-primary-darkest;
+      &:hover {
+        background-color: $color-white;
+      }
+      span {
+        border-bottom-color: $color-primary-alt-light;
+        color: $color-primary-darkest;
+      }
+    }
+  }
+  .usa-nav-primary a,
+  .usa-nav-primary > li > a,
+  .usa-nav-primary button,
+  .usa-nav-secondary-links a {
+    color: $color-primary-darkest;
+    font-weight: $font-normal;
+    -moz-osx-font-smoothing: grayscale; // to match .usa-nav-link styles sans hover
+    -webkit-font-smoothing: antialiased;
+    &:hover,
+    &:active,
+    &:visited,
+    &:visited:active,
+    &:visited:hover {
+      color: $color-primary-darkest;
+      span {
+        border-color: $color-primary-alt-light;
+      }
+    }
+  }
+}
+
+.usa-nav-secondary {
+  display: inline-block;
+  // float: right;
+  font-weight: $font-normal;
+  top: 0;
+  a {
+    padding: 1.5rem 0;
+    font-size: $small-font-size;
+  }
+
+  @media screen and (min-width: $nav-width) and (max-width: $hide-secondary-nav-breakpoint) {
+    display: none;
+  }
+}

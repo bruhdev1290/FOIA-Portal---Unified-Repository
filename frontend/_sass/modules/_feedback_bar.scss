@@ -1,0 +1,28 @@
+.feedback-bar-production, .feedback-bar-non-production {
+  clear: both;
+  padding: $space-2x;
+  margin: $space-2x auto 0;
+  font-size: $small-font-size;
+  p {
+    margin: 0;
+  }
+  a {
+    border-bottom: 1px solid $color-primary-darkest;
+  }
+  @media screen and (min-width: $nav-width) {
+    float: right;
+    clear: none;
+    width: 60%;
+    margin-top: 0;
+  }
+}
+
+.feedback-bar-production {
+  background: $color-primary-alt-lightest;
+}
+
+.feedback-bar-non-production {
+  .usa-alert-body {
+    padding-left: 6rem;
+  }
+}

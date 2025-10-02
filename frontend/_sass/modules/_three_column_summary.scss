@@ -1,0 +1,72 @@
+$icon-circumference: 6.4rem;
+$icon-circumference-tablet: $space-4x;
+.three-column-summary {
+  margin: $space-5x auto $space-1x * 7;
+  h2:after {
+    content: "";
+    @include text-divider;
+  }
+  .usa-width-one-third {
+    p {
+      @media screen and (min-width: $medium-screen) {
+        padding-right: 1rem;
+      }
+    }
+    h4 {
+      font-size: $base-font-size;
+      font-family: $font-sans;
+      // separate the headlines from preceding grafs when they're stacked
+      @media screen and (max-width: $medium-screen) {
+        span {
+          margin-top: $space-1x;
+          padding-top: $space-1x;
+        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        float: left;
+        border-radius: 100px;
+        border: 2px solid $color-primary-alt;
+        width: $icon-circumference;
+        height: $icon-circumference;
+        margin-top: -8px;
+        margin-right: 10px;
+        background-color: $color-white;
+        background-repeat: no-repeat;
+        background-size: 65%;
+        background-position: center center;
+        @media screen and (min-width: $medium-screen) and (max-width: $medium-large-screen) {
+          width: $icon-circumference-tablet;
+          height: $icon-circumference-tablet;
+          margin-top: 5px;
+        }
+        @media screen and (min-width: $large-screen) {
+          width: $space-1x * 8; // 64px
+          height: $space-1x * 8;
+          margin-top: -7px;
+          margin-right: 15px;
+        }
+      }
+      span {
+        margin-left: 75px;
+        display: block;
+        @media screen and (min-width: $medium-screen) and (max-width: $medium-large-screen) {
+          margin-left: 40px;
+        }
+      }
+    }
+    &:nth-child(2) h4:before {
+      background-image: url('/img/landing-logo-research.svg');
+      background-position: 61% 54%;
+    }
+    &:nth-child(3) h4:before {
+      background-image: url('/img/landing-logo-agency.svg');
+      background-position: center 45%;
+    }
+    &:nth-child(4) h4:before {
+      background-image: url('/img/landing-logo-calendar.svg');
+      background-position: center 45%;
+    }
+  }
+}

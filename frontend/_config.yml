@@ -1,0 +1,113 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: FOIA.gov - Freedom of Information Act
+description: > # this means to ignore newlines until "baseurl:"
+  The Freedom of Information Act (FOIA) is a law that gives you the right to
+  access information from the federal government. It is often described as the
+  law that keeps citizens in the know about their government.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+timezone: America/New_York
+email: National.FOIAPortal@usdoj.gov
+app_env: local
+
+navigation:
+  primary:
+    - href: /about.html
+      title: Learn about FOIA
+      children:
+        - href: /about.html
+          title: What is FOIA?
+        - href: /how-to.html
+          title: How to make a FOIA request
+        - href: /faq.html
+          title: Frequently asked questions
+        - href: /foia-statute.html
+          title: Freedom of Information Act Statute
+        - href: /index-es.html
+          title: FOIA en Español
+    - href: /
+      title: Before you request
+      children:
+        - href: /search.html
+          title: Search government websites
+        - href: /#learn-more
+          title: Research
+        - href: /opengov.html
+          title: Additional government resources
+    - href: /wizard.html
+      title: Search tool
+      children:
+        - href: /wizard.html
+          title: Use our search tool
+        - href: /how-wizard-works.html
+          title: How it works
+    - href: /agency-search.html
+      title: Create a request
+    - href: /data.html
+      title: Agency FOIA data
+      children:
+        - href: /reports.html
+          title: Overview
+        - href: /data.html
+          title: Annual data
+        - href: /quarterly.html
+          title: Quarterly data
+    - href: /chief-foia-officers-council
+      title: CFO Council
+      children:
+        - href: /chief-foia-officers-council
+          title: Overview and Meetings
+        - href: /chief-foia-officers-council/committee/technology-committee
+          title: Technology Committee
+        - href: /chief-foia-officers-council/committee/cross-agency-collaboration-innovation
+          title: Committee On Cross-Agency Collaboration and Innovation
+    #- href: /chief-foia-officers-council
+    #  title: Chief FOIA Officers Council
+    #  children:
+    #    - href: /chief-foia-officers-council
+    #      title: Chief FOIA Officers Council
+    #    - href: /chief-foia-officers-council/committee/technology-committee
+    #      title: Technology Committee
+    #    - href: /chief-foia-officers-council/committee/committee-on-cross-agency-collaboration-and-innovation
+    #      title: Committee On Cross-Agency Collaboration and Innovation
+
+  secondary:
+    - href: https://admin.foia.gov/user/login
+      title: Agency login
+collections:
+  api:
+    output: true
+  glossary_terms: {}
+  request_form_sections: {}
+
+defaults:
+  - scope:
+      path: ''
+      type: api
+    values:
+      layout: json
+      permalink: /:collection/:path.json
+
+# Build settings
+markdown: kramdown
+source: www.foia.gov
+include:
+  - .bp-config
+  - .htaccess
+  - .htpasswd
+exclude:
+  - README.md

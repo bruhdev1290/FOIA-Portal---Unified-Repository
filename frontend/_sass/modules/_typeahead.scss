@@ -1,0 +1,45 @@
+.twitter-typeahead {
+  &:not(.usa-reset-width) {
+    max-width: 46rem; // Match the max-width on WDS inputs
+    width: 80%;
+  }
+
+  .tt-menu {
+    background-color: $color-white;
+    border: 0.0625rem solid $color-gray-light;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.625rem rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-top: 0;
+    max-height: 30rem;
+    overflow-y: auto;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .tt-hint,
+  .tt-input {
+    margin: 0;
+  }
+
+  &:not(.usa-search-bg-light) .tt-input {
+    border: none;
+  }
+
+  .tt-suggestion {
+    font-size: $base-font-size;
+    padding: $space-1x $space-2x;
+    color: $color-primary-darkest;
+
+    &.tt-cursor,
+    &:focus,
+    &:hover {
+      background-color: $color-primary-alt-lightest;
+      color: $color-primary-darkest;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

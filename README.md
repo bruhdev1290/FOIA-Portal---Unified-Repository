@@ -11,11 +11,11 @@ The [Freedom of Information Act (FOIA)](https://www.justice.gov/oip/freedom-info
 
 ## 🏗️ System Overview
 
-This system consists of:
+This repository contains the complete FOIA Portal system:
 
 - **Backend**: A Drupal-based API and content management system for processing FOIA requests
-- **Web Interface**: Public-facing portal where citizens can submit and track requests
-- **Admin Interface**: Tools for agencies to manage and respond to requests
+- **Frontend**: A Jekyll-based public-facing website where citizens can submit and track requests
+- **Admin Interface**: Drupal's administrative interface for agencies to manage and respond to requests
 
 ## 📁 Repository Structure
 
@@ -26,6 +26,14 @@ FOIA-Portal---Unified-Repository/
 │   ├── 📁 blt/             # Build and Launch Tool setup
 │   ├── 📄 composer.json    # PHP dependencies
 │   └── 📄 README.md        # Backend setup instructions
+├── 📁 frontend/             # Jekyll frontend application
+│   ├── 📁 _layouts/        # Jekyll templates
+│   ├── 📁 _includes/       # Reusable components
+│   ├── 📁 assets/          # CSS, JS, images
+│   ├── 📄 _config.yml      # Jekyll configuration
+│   ├── 📄 Gemfile          # Ruby dependencies
+│   ├── 📄 package.json     # Node.js dependencies
+│   └── 📄 README.md        # Frontend setup instructions
 ├── 📁 docs/                 # Project documentation
 │   ├── 📄 DEVELOPMENT.md   # Development guide
 │   └── 📄 DEPLOYMENT.md    # Deployment instructions
@@ -115,8 +123,8 @@ Once you have the development environment running, you can:
 - **API Integration**: Connect with existing agency systems
 
 ### For Developers:
-- **RESTful API**: Well-documented API for integrations
-- **Modern Stack**: Built with Drupal, PHP, and modern web technologies
+- **RESTful API**: Well-documented API for building frontends and integrations
+- **Modern Stack**: Built with Drupal (backend) and Jekyll (frontend)
 - **Docker Support**: Consistent development environment
 - **Automated Testing**: Comprehensive test suite
 - **CI/CD Pipeline**: Automated deployment and testing
@@ -202,6 +210,11 @@ This project is in the **public domain** within the United States. Copyright and
 
 ### Current Status: 🚧 Active Development
 
+**Repository Contents:**
+- ✅ **Backend API**: Complete Drupal-based FOIA processing system
+- ✅ **Frontend**: Jekyll-based public portal for citizens
+- ✅ **Admin Interface**: Full Drupal administrative interface
+
 ### Recent Updates:
 - ✅ Repository reorganization and cleanup
 - ✅ Improved documentation and setup guides
@@ -213,6 +226,7 @@ This project is in the **public domain** within the United States. Copyright and
 - 🔄 Improved testing coverage
 - 🔄 Performance optimizations
 - 🔄 Additional agency integrations
+- � Frontend/Backend integration improvements
 
 ## 📞 Support & Community
 

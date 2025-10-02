@@ -1,0 +1,9 @@
+{% if site.app_env == 'production' %}
+<script type="text/javascript">
+  {% include foresee-production.js %}
+</script>
+{% elsif site.app_env == 'staging' %}
+<script type="text/javascript">
+  {% include foresee-staging.js %}
+</script>
+{% endif %}

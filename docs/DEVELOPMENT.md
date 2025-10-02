@@ -52,8 +52,9 @@ This guide helps developers set up and work with the FOIA Portal codebase on any
 2. **Install required software:**
    - [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
    - [Git for Windows](https://git-scm.com/download/win)
-   - [Node.js LTS](https://nodejs.org/) (if working with frontend)
-   - [PHP 8.1+](https://windows.php.net/download/) (if working with backend)
+   - [Ruby 3.1+](https://rubyinstaller.org/) (for Jekyll frontend)
+   - [Node.js LTS](https://nodejs.org/) (for frontend assets)
+   - [PHP 8.1+](https://windows.php.net/download/) (for Drupal backend)
    - [Composer](https://getcomposer.org/download/) (PHP package manager)
 
 3. **Configure Git for Windows:**
@@ -80,6 +81,26 @@ This guide helps developers set up and work with the FOIA Portal codebase on any
    docker-compose up -d
    ```
 
+#### Frontend Setup on Windows
+
+1. **Install Ruby dependencies:**
+   ```cmd
+   cd ..\frontend
+   bundle install
+   ```
+
+2. **Install Node.js dependencies:**
+   ```cmd
+   npm install
+   ```
+
+3. **Start Jekyll development server:**
+   ```cmd
+   bundle exec jekyll serve
+   ```
+
+   The frontend will be available at: http://localhost:4000
+
 ### Method 3: macOS Manual Setup
 
 #### Prerequisites for macOS
@@ -91,7 +112,7 @@ This guide helps developers set up and work with the FOIA Portal codebase on any
 
 2. **Install required software:**
    ```bash
-   brew install git docker php composer node
+   brew install git docker php composer node ruby
    brew install --cask docker visual-studio-code
    ```
 

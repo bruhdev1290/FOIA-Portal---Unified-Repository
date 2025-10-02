@@ -43,8 +43,11 @@ All submissions require review. We use GitHub pull requests for this purpose.
 
 ## Testing
 
-- Backend: Run `composer test` in the backend directory
-- Frontend: Run `npm test` in the frontend directory
+- **Backend**: Run `composer test` in the backend directory
+- **Backend Tests**: Run `vendor/bin/phpunit` for unit tests
+- **Code Standards**: Run `vendor/bin/phpcs` to check coding standards
+- **Frontend**: Run `bundle exec jekyll build` in the frontend directory
+- **Frontend Serve**: Run `bundle exec jekyll serve` for local development
 
 ## Documentation
 
