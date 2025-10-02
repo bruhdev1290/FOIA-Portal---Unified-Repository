@@ -1,0 +1,42 @@
+uuid: c8f7a31f-685b-4aaf-9adf-20614a9d297f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.foia_xiia.field_agency_component
+    - field.field.paragraph.foia_xiia.field_back_app_end_yr
+    - field.field.paragraph.foia_xiia.field_back_req_end_yr
+    - paragraphs.paragraphs_type.foia_xiia
+  module:
+    - text
+id: paragraph.foia_xiia.default
+targetEntityType: paragraph
+bundle: foia_xiia
+mode: default
+content:
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_back_app_end_yr:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_back_req_end_yr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

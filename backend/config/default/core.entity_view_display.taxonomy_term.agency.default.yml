@@ -1,0 +1,53 @@
+uuid: 1c891915-951e-44da-bb97-bf023f505856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.agency.field_agency_abbreviation
+    - field.field.taxonomy_term.agency.field_agency_category
+    - field.field.taxonomy_term.agency.field_agency_seal
+    - taxonomy.vocabulary.agency
+  module:
+    - image
+    - text
+id: taxonomy_term.agency.default
+targetEntityType: taxonomy_term
+bundle: agency
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_agency_abbreviation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_agency_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_agency_seal:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,72 @@
+uuid: 924c1b28-ce37-47e1-b51c-f1880f1663ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_vib.field_affirmed_on_app
+    - field.field.paragraph.admin_app_vib.field_agency_component
+    - field.field.paragraph.admin_app_vib.field_closed_oth_app
+    - field.field.paragraph.admin_app_vib.field_complete_on_app
+    - field.field.paragraph.admin_app_vib.field_part_on_app
+    - field.field.paragraph.admin_app_vib.field_total
+    - paragraphs.paragraphs_type.admin_app_vib
+id: paragraph.admin_app_vib.default
+targetEntityType: paragraph
+bundle: admin_app_vib
+mode: default
+content:
+  field_affirmed_on_app:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_closed_oth_app:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_complete_on_app:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_part_on_app:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_total:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,184 @@
+uuid: 56b0a16e-b710-4a72-a9cc-0a79b3911040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.foia_req_vb1.field_agency_component
+    - field.field.paragraph.foia_req_vb1.field_dup_request
+    - field.field.paragraph.foia_req_vb1.field_fee_related_reason
+    - field.field.paragraph.foia_req_vb1.field_full_denials_ex
+    - field.field.paragraph.foia_req_vb1.field_full_grants
+    - field.field.paragraph.foia_req_vb1.field_imp_req_oth_reason
+    - field.field.paragraph.foia_req_vb1.field_no_rec
+    - field.field.paragraph.foia_req_vb1.field_not_agency_record
+    - field.field.paragraph.foia_req_vb1.field_oth
+    - field.field.paragraph.foia_req_vb1.field_part_grants_denials
+    - field.field.paragraph.foia_req_vb1.field_rec_not_desc
+    - field.field.paragraph.foia_req_vb1.field_rec_ref_to_an_comp
+    - field.field.paragraph.foia_req_vb1.field_req_withdrawn
+    - field.field.paragraph.foia_req_vb1.field_total
+    - paragraphs.paragraphs_type.foia_req_vb1
+  module:
+    - entity_reference_views_select
+    - field_group
+third_party_settings:
+  field_group:
+    group_foia_requests_v_b_1:
+      children:
+        - group_main
+        - group_num_full_denials_ex
+      label: 'FOIA Requests V. B. (1)'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_main:
+      children:
+        - field_agency_component
+        - field_full_grants
+        - field_part_grants_denials
+        - field_full_denials_ex
+        - field_total
+      label: Agency/Component
+      region: content
+      parent_name: group_foia_requests_v_b_1
+      weight: 0
+      format_type: tab
+      format_settings:
+        label: Agency/Component
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_num_full_denials_ex:
+      children:
+        - field_no_rec
+        - field_rec_ref_to_an_comp
+        - field_req_withdrawn
+        - field_fee_related_reason
+        - field_rec_not_desc
+        - field_imp_req_oth_reason
+        - field_not_agency_record
+        - field_dup_request
+        - field_oth
+      label: 'Number of Full Denials Based on Reasons Other than Exemptions'
+      region: content
+      parent_name: group_foia_requests_v_b_1
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.foia_req_vb1.default
+targetEntityType: paragraph
+bundle: foia_req_vb1
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dup_request:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fee_related_reason:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_full_denials_ex:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_full_grants:
+    type: number
+    weight: 19
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_imp_req_oth_reason:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_no_rec:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_not_agency_record:
+    type: number
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_oth:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_part_grants_denials:
+    type: number
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_rec_not_desc:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_rec_ref_to_an_comp:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_req_withdrawn:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_total:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

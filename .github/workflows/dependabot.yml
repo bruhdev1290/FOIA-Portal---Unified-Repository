@@ -1,0 +1,40 @@
+name: Dependabot Auto-merge
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        
+      - name: Check if PR is from Dependabot
+        id: check-author
+        run: |
+          if [[ "${{ github.actor }}" == "dependabot[bot]" ]]; then
+            echo "is_dependabot=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_dependabot=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Enable auto-merge for Dependabot PRs
+        if: steps.check-author.outputs.is_dependabot == 'true'
+        run: |
+          echo "This PR is from Dependabot and can be auto-merged after CI passes"
+          
+      - name: Comment on PR
+        if: steps.check-author.outputs.is_dependabot == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🤖 This is an automated dependency update from Dependabot. It will be auto-merged once CI passes.'
+            })

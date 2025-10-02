@@ -1,0 +1,162 @@
+uuid: 8f7dcd6e-4da9-4062-b147-c6d1125bca5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.proc_req_viic.field_101_120_days
+    - field.field.paragraph.proc_req_viic.field_121_140_days
+    - field.field.paragraph.proc_req_viic.field_141_160_days
+    - field.field.paragraph.proc_req_viic.field_161_180_days
+    - field.field.paragraph.proc_req_viic.field_181_200_days
+    - field.field.paragraph.proc_req_viic.field_1_20_days
+    - field.field.paragraph.proc_req_viic.field_201_300_days
+    - field.field.paragraph.proc_req_viic.field_21_40_days
+    - field.field.paragraph.proc_req_viic.field_301_400_days
+    - field.field.paragraph.proc_req_viic.field_400_up_days
+    - field.field.paragraph.proc_req_viic.field_41_60_days
+    - field.field.paragraph.proc_req_viic.field_61_80_days
+    - field.field.paragraph.proc_req_viic.field_81_100_days
+    - field.field.paragraph.proc_req_viic.field_agency_component
+    - field.field.paragraph.proc_req_viic.field_total
+    - paragraphs.paragraphs_type.proc_req_viic
+id: paragraph.proc_req_viic.default
+targetEntityType: paragraph
+bundle: proc_req_viic
+mode: default
+content:
+  field_101_120_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_121_140_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_141_160_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_161_180_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_181_200_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_1_20_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_201_300_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_21_40_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_301_400_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_400_up_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_41_60_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_61_80_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_81_100_days:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_total:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+hidden:
+  search_api_excerpt: true

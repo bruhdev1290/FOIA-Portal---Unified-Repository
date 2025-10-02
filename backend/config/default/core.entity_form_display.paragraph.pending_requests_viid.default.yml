@@ -1,0 +1,171 @@
+uuid: d84a9701-9b4f-47cd-874c-61ad781e1c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pending_requests_viid.field_agency_component
+    - field.field.paragraph.pending_requests_viid.field_comp_avg
+    - field.field.paragraph.pending_requests_viid.field_comp_med
+    - field.field.paragraph.pending_requests_viid.field_comp_pend
+    - field.field.paragraph.pending_requests_viid.field_exp_avg
+    - field.field.paragraph.pending_requests_viid.field_exp_med
+    - field.field.paragraph.pending_requests_viid.field_exp_pend
+    - field.field.paragraph.pending_requests_viid.field_sim_avg
+    - field.field.paragraph.pending_requests_viid.field_sim_med
+    - field.field.paragraph.pending_requests_viid.field_sim_pend
+    - paragraphs.paragraphs_type.pending_requests_viid
+  module:
+    - entity_reference_views_select
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_pending_requests_vii_d:
+      children:
+        - group_simple
+        - group_complex
+        - group_expedited_processing
+      label: 'Pending Requests VII. D.'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        label: 'Pending Requests VII. D.'
+        classes: ''
+        id: ''
+        direction: vertical
+    group_simple:
+      children:
+        - field_sim_pend
+        - field_sim_med
+        - field_sim_avg
+      label: Simple
+      region: content
+      parent_name: group_pending_requests_vii_d
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_complex:
+      children:
+        - field_comp_pend
+        - field_comp_med
+        - field_comp_avg
+      label: Complex
+      region: content
+      parent_name: group_pending_requests_vii_d
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_expedited_processing:
+      children:
+        - field_exp_pend
+        - field_exp_med
+        - field_exp_avg
+      label: 'Expedited Processing'
+      region: content
+      parent_name: group_pending_requests_vii_d
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.pending_requests_viid.default
+targetEntityType: paragraph
+bundle: pending_requests_viid
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comp_avg:
+    type: text_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comp_med:
+    type: text_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comp_pend:
+    type: text_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_avg:
+    type: text_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_med:
+    type: text_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_pend:
+    type: text_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_avg:
+    type: text_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_med:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_pend:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

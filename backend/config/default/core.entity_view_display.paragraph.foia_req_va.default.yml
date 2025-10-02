@@ -1,0 +1,62 @@
+uuid: 1e8eb077-3dc4-4f3f-85c4-269ba2d11765
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.foia_req_va.field_agency_component
+    - field.field.paragraph.foia_req_va.field_req_pend_end_yr
+    - field.field.paragraph.foia_req_va.field_req_pend_start_yr
+    - field.field.paragraph.foia_req_va.field_req_processed_yr
+    - field.field.paragraph.foia_req_va.field_req_received_yr
+    - paragraphs.paragraphs_type.foia_req_va
+id: paragraph.foia_req_va.default
+targetEntityType: paragraph
+bundle: foia_req_va
+mode: default
+content:
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_req_pend_end_yr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_req_pend_start_yr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_req_processed_yr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_req_received_yr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,44 @@
+uuid: c90e59c8-9647-4388-a222-b7d1af0c9509
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.foia_req_vb2.field_agency_component
+    - field.field.paragraph.foia_req_vb2.field_foia_req_vb2_info
+    - field.field.paragraph.foia_req_vb2.field_total
+    - paragraphs.paragraphs_type.foia_req_vb2
+  module:
+    - entity_reference_revisions
+id: paragraph.foia_req_vb2.default
+targetEntityType: paragraph
+bundle: foia_req_vb2
+mode: default
+content:
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_foia_req_vb2_info:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_total:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

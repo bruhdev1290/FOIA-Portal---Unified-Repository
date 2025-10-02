@@ -1,0 +1,59 @@
+uuid: a5b6d4e9-910a-47bd-b4d8-9ba2cf5f6824
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.foia_personnel.foia_personnel.field_agency
+    - field.field.foia_personnel.foia_personnel.field_foia_personnel_email
+    - field.field.foia_personnel.foia_personnel.field_foia_personnel_phone
+    - field.field.foia_personnel.foia_personnel.field_foia_personnel_title
+  module:
+    - foia_personnel
+    - telephone
+id: foia_personnel.foia_personnel.default
+targetEntityType: foia_personnel
+bundle: foia_personnel
+mode: default
+content:
+  field_agency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_foia_personnel_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_foia_personnel_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_foia_personnel_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
+  user_id: true

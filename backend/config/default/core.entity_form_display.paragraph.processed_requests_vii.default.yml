@@ -1,0 +1,202 @@
+uuid: b855ddc8-eaac-4af6-b57b-e6ce4f07925c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.processed_requests_vii.field_agency_component
+    - field.field.paragraph.processed_requests_vii.field_comp_avg
+    - field.field.paragraph.processed_requests_vii.field_comp_high
+    - field.field.paragraph.processed_requests_vii.field_comp_low
+    - field.field.paragraph.processed_requests_vii.field_comp_med
+    - field.field.paragraph.processed_requests_vii.field_exp_avg
+    - field.field.paragraph.processed_requests_vii.field_exp_high
+    - field.field.paragraph.processed_requests_vii.field_exp_low
+    - field.field.paragraph.processed_requests_vii.field_exp_med
+    - field.field.paragraph.processed_requests_vii.field_sim_avg
+    - field.field.paragraph.processed_requests_vii.field_sim_high
+    - field.field.paragraph.processed_requests_vii.field_sim_low
+    - field.field.paragraph.processed_requests_vii.field_sim_med
+    - paragraphs.paragraphs_type.processed_requests_vii
+  module:
+    - entity_reference_views_select
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_processed_requests_vii:
+      children:
+        - field_agency_component
+        - group_simple
+        - group_complex
+        - group_expedited_processing
+      label: 'Processed Requests VII.'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_simple:
+      children:
+        - field_sim_med
+        - field_sim_avg
+        - field_sim_low
+        - field_sim_high
+      label: Simple
+      region: content
+      parent_name: group_processed_requests_vii
+      weight: 1
+      format_type: tab
+      format_settings:
+        label: Simple
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_complex:
+      children:
+        - field_comp_med
+        - field_comp_avg
+        - field_comp_low
+        - field_comp_high
+      label: Complex
+      region: content
+      parent_name: group_processed_requests_vii
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_expedited_processing:
+      children:
+        - field_exp_med
+        - field_exp_avg
+        - field_exp_low
+        - field_exp_high
+      label: 'Expedited Processing'
+      region: content
+      parent_name: group_processed_requests_vii
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.processed_requests_vii.default
+targetEntityType: paragraph
+bundle: processed_requests_vii
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comp_avg:
+    type: text_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comp_high:
+    type: text_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comp_low:
+    type: text_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comp_med:
+    type: text_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_avg:
+    type: text_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_high:
+    type: text_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_low:
+    type: text_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_exp_med:
+    type: text_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_avg:
+    type: text_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_high:
+    type: text_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_low:
+    type: text_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sim_med:
+    type: text_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

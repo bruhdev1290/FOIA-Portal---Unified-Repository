@@ -1,0 +1,55 @@
+uuid: 39627b32-9d66-485d-8c3d-4c5320e23181
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_via.field_agency_component
+    - field.field.paragraph.admin_app_via.field_app_pend_end_yr
+    - field.field.paragraph.admin_app_via.field_app_pend_start_yr
+    - field.field.paragraph.admin_app_via.field_app_processed_yr
+    - field.field.paragraph.admin_app_via.field_app_received_yr
+    - paragraphs.paragraphs_type.admin_app_via
+  module:
+    - entity_reference_views_select
+id: paragraph.admin_app_via.default
+targetEntityType: paragraph
+bundle: admin_app_via
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_app_pend_end_yr:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_app_pend_start_yr:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_app_processed_yr:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_app_received_yr:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

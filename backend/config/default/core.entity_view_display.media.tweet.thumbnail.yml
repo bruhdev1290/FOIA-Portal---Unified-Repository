@@ -1,0 +1,37 @@
+uuid: e4b832a5-03bc-4f06-a023-1ccf4c1166cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_media_in_library
+    - image.style.medium
+    - media.type.tweet
+  module:
+    - image
+_core:
+  default_config_hash: qZPVLV0vvVvfm7VUTy4qTRJR7ZytVPwvUT7j95HUScs
+id: media.tweet.thumbnail
+targetEntityType: media
+bundle: tweet
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  embed_code: true
+  field_media_in_library: true
+  name: true
+  search_api_excerpt: true
+  uid: true

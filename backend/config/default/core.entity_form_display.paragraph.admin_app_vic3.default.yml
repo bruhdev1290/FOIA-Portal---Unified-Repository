@@ -1,0 +1,90 @@
+uuid: 194ea8b3-af39-4daf-bf47-9eb240ed6f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_vic3.field_admin_app_vic3_info
+    - field.field.paragraph.admin_app_vic3.field_agency_component
+    - field.field.paragraph.admin_app_vic3.field_total
+    - paragraphs.paragraphs_type.admin_app_vic3
+  module:
+    - entity_reference_views_select
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_admin_appeals_vi_wrapper_p:
+      children:
+        - group_vic3_agency_component_p_wr
+        - group__other_reasons_info_p_wrap
+      label: 'Administrative Appeals VI. C (3)'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_vic3_agency_component_p_wr:
+      children:
+        - field_agency_component
+        - field_total
+      label: Agency/Component
+      region: content
+      parent_name: group_admin_appeals_vi_wrapper_p
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group__other_reasons_info_p_wrap:
+      children:
+        - field_admin_app_vic3_info
+      label: '"Other" Reasons Information'
+      region: content
+      parent_name: group_admin_appeals_vi_wrapper_p
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.admin_app_vic3.default
+targetEntityType: paragraph
+bundle: admin_app_vic3
+mode: default
+content:
+  field_admin_app_vic3_info:
+    type: entity_reference_paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_agency_component:
+    type: erviews_options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_total:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

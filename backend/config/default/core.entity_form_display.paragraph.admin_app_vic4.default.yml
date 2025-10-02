@@ -1,0 +1,59 @@
+uuid: a7487b1b-36dc-4e18-8842-a936d044beeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_vic4.field_agency_component
+    - field.field.paragraph.admin_app_vic4.field_avg_num_days
+    - field.field.paragraph.admin_app_vic4.field_high_num_days
+    - field.field.paragraph.admin_app_vic4.field_low_num_days
+    - field.field.paragraph.admin_app_vic4.field_med_num_days
+    - paragraphs.paragraphs_type.admin_app_vic4
+  module:
+    - entity_reference_views_select
+id: paragraph.admin_app_vic4.default
+targetEntityType: paragraph
+bundle: admin_app_vic4
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_avg_num_days:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_high_num_days:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_low_num_days:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_med_num_days:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

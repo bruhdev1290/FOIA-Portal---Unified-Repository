@@ -1,0 +1,68 @@
+uuid: afd7571a-b0ba-4b87-b400-574d5ac57f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.req_viiia.field_agency_component
+    - field.field.paragraph.req_viiia.field_avg_days_jud
+    - field.field.paragraph.req_viiia.field_med_days_jud
+    - field.field.paragraph.req_viiia.field_num_denied
+    - field.field.paragraph.req_viiia.field_num_grant
+    - field.field.paragraph.req_viiia.field_num_jud_w10
+    - paragraphs.paragraphs_type.req_viiia
+  module:
+    - text
+id: paragraph.req_viiia.default
+targetEntityType: paragraph
+bundle: req_viiia
+mode: default
+content:
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_avg_days_jud:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_med_days_jud:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_num_denied:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_num_grant:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_num_jud_w10:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

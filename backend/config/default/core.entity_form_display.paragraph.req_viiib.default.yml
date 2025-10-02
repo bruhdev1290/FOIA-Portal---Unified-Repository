@@ -1,0 +1,58 @@
+uuid: daeccdf6-2c1a-4b27-bdfd-e974e484f903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.req_viiib.field_agency_component
+    - field.field.paragraph.req_viiib.field_avg_days_jud
+    - field.field.paragraph.req_viiib.field_med_days_jud
+    - field.field.paragraph.req_viiib.field_num_denied
+    - field.field.paragraph.req_viiib.field_num_grant
+    - paragraphs.paragraphs_type.req_viiib
+  module:
+    - entity_reference_views_select
+    - text
+id: paragraph.req_viiib.default
+targetEntityType: paragraph
+bundle: req_viiib
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_avg_days_jud:
+    type: text_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_med_days_jud:
+    type: text_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_num_denied:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_num_grant:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,111 @@
+uuid: 0b2f6886-a1d7-4a48-be4b-1f09db932066
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_vic2.field_agency_component
+    - field.field.paragraph.admin_app_vic2.field_app_denial_exp
+    - field.field.paragraph.admin_app_vic2.field_dup_req
+    - field.field.paragraph.admin_app_vic2.field_fee_related_reason
+    - field.field.paragraph.admin_app_vic2.field_imp_req_oth_reason
+    - field.field.paragraph.admin_app_vic2.field_no_rec
+    - field.field.paragraph.admin_app_vic2.field_not_agency_record
+    - field.field.paragraph.admin_app_vic2.field_oth
+    - field.field.paragraph.admin_app_vic2.field_rec_not_desc
+    - field.field.paragraph.admin_app_vic2.field_rec_refer_initial
+    - field.field.paragraph.admin_app_vic2.field_req_in_lit
+    - field.field.paragraph.admin_app_vic2.field_req_withdrawn
+    - paragraphs.paragraphs_type.admin_app_vic2
+  module:
+    - entity_reference_views_select
+id: paragraph.admin_app_vic2.default
+targetEntityType: paragraph
+bundle: admin_app_vic2
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_app_denial_exp:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_dup_req:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fee_related_reason:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_imp_req_oth_reason:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_no_rec:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_not_agency_record:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_oth:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_rec_not_desc:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_rec_refer_initial:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_req_in_lit:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_req_withdrawn:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

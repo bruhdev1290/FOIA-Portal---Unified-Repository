@@ -1,0 +1,135 @@
+uuid: 448bdf6c-2719-4bff-8a38-936d7a731605
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.proc_req_viic.field_101_120_days
+    - field.field.paragraph.proc_req_viic.field_121_140_days
+    - field.field.paragraph.proc_req_viic.field_141_160_days
+    - field.field.paragraph.proc_req_viic.field_161_180_days
+    - field.field.paragraph.proc_req_viic.field_181_200_days
+    - field.field.paragraph.proc_req_viic.field_1_20_days
+    - field.field.paragraph.proc_req_viic.field_201_300_days
+    - field.field.paragraph.proc_req_viic.field_21_40_days
+    - field.field.paragraph.proc_req_viic.field_301_400_days
+    - field.field.paragraph.proc_req_viic.field_400_up_days
+    - field.field.paragraph.proc_req_viic.field_41_60_days
+    - field.field.paragraph.proc_req_viic.field_61_80_days
+    - field.field.paragraph.proc_req_viic.field_81_100_days
+    - field.field.paragraph.proc_req_viic.field_agency_component
+    - field.field.paragraph.proc_req_viic.field_total
+    - paragraphs.paragraphs_type.proc_req_viic
+  module:
+    - entity_reference_views_select
+id: paragraph.proc_req_viic.default
+targetEntityType: paragraph
+bundle: proc_req_viic
+mode: default
+content:
+  field_101_120_days:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_121_140_days:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_141_160_days:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_161_180_days:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_181_200_days:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_1_20_days:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_201_300_days:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_21_40_days:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_301_400_days:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_400_up_days:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_41_60_days:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_61_80_days:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_81_100_days:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_total:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

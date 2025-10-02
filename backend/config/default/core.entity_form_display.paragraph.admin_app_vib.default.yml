@@ -1,0 +1,63 @@
+uuid: ad988ec1-5566-4747-8322-8134a24e8a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.admin_app_vib.field_affirmed_on_app
+    - field.field.paragraph.admin_app_vib.field_agency_component
+    - field.field.paragraph.admin_app_vib.field_closed_oth_app
+    - field.field.paragraph.admin_app_vib.field_complete_on_app
+    - field.field.paragraph.admin_app_vib.field_part_on_app
+    - field.field.paragraph.admin_app_vib.field_total
+    - paragraphs.paragraphs_type.admin_app_vib
+  module:
+    - entity_reference_views_select
+id: paragraph.admin_app_vib.default
+targetEntityType: paragraph
+bundle: admin_app_vib
+mode: default
+content:
+  field_affirmed_on_app:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_closed_oth_app:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_complete_on_app:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_part_on_app:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_total:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

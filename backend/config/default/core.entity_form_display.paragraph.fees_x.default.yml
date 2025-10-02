@@ -1,0 +1,39 @@
+uuid: 38214061-6cdc-4289-8c2f-04a15efa59f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fees_x.field_agency_component
+    - field.field.paragraph.fees_x.field_perc_costs
+    - field.field.paragraph.fees_x.field_total_fees
+    - paragraphs.paragraphs_type.fees_x
+  module:
+    - entity_reference_views_select
+id: paragraph.fees_x.default
+targetEntityType: paragraph
+bundle: fees_x
+mode: default
+content:
+  field_agency_component:
+    type: erviews_options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_perc_costs:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_total_fees:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

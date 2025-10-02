@@ -1,0 +1,32 @@
+uuid: a05ec373-21d2-4055-bdf0-f413ff82912e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sub_xia.field_agency_component
+    - field.field.paragraph.sub_xia.field_sub_used
+    - paragraphs.paragraphs_type.sub_xia
+id: paragraph.sub_xia.default
+targetEntityType: paragraph
+bundle: sub_xia
+mode: default
+content:
+  field_agency_component:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sub_used:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true
