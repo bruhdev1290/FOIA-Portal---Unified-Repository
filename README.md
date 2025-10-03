@@ -139,7 +139,6 @@ Once you have the development environment running, you can:
 
 ### 🆘 Getting Help
 - **[📋 Create an Issue](https://github.com/bruhdev1290/FOIA-Portal---Unified-Repository/issues/new/choose)** - Report bugs or request features
-- **[💬 Discussions](https://github.com/bruhdev1290/FOIA-Portal---Unified-Repository/discussions)** - Ask questions and get help from the community
 
 ### 🔧 Troubleshooting Common Issues
 
@@ -204,7 +203,6 @@ This project is in the **public domain** within the United States. Copyright and
 - ✅ You can use this code for any purpose
 - ✅ No attribution required (but appreciated!)
 - ✅ You can modify and distribute freely
-- ✅ You can use it commercially
 
 ## 🎯 Project Status & Roadmap
 
@@ -232,18 +230,9 @@ This project is in the **public domain** within the United States. Copyright and
 
 ### 🆘 Need Help?
 - **[📋 GitHub Issues](https://github.com/bruhdev1290/FOIA-Portal---Unified-Repository/issues)** - Report bugs and request features
-- **[💬 GitHub Discussions](https://github.com/bruhdev1290/FOIA-Portal---Unified-Repository/discussions)** - Ask questions and share ideas
 - **[📚 Documentation](docs/)** - Comprehensive guides and references
 
 ### 🏛️ Government Resources
 - **[FOIA.gov](https://www.foia.gov/)** - Official FOIA information
 - **[DOJ FOIA Guide](https://www.justice.gov/oip/freedom-information-act-5-usc-552)** - Legal framework and requirements
 - **[FOIA Improvement Act of 2016](https://www.justice.gov/oip/oip-summary-foia-improvement-act-2016)** - Legislative background
-
----
-
-### 🙏 Acknowledgments
-
-This repository represents the collaborative efforts of government agencies, contractors, and the open-source community to improve public access to government information. Special thanks to all contributors who have helped make FOIA requests more accessible to citizens.
-
-**Made with ❤️ for transparent government and citizen empowerment**
